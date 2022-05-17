@@ -1,67 +1,116 @@
-%*----------- SLIDE -------------------------------------------------------------
-\begin{frame}[c]{A tropa dos quatro incríveis}
-    %\transboxin[duration=1,direction=30]
-    A simulação deverá ser desenvolvida com 4 unidades Darwin-OP, comumente esta unidade é utilizada para desafios em competições de robótica.
-    \newline
 
-    A tropa será composta por 4 Darwin-OP, e deverá realizar duas missões:
+% --------------------------------------Alexandre---------------------------------------------------
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[c]{O próximo grande marco}
+    %\transboxin[duration=1,direction=30]
+    Os usos práticos dos AUVs abrangem uma ampla gama.
     \begin{itemize}
-        \item marchar em forma unida em linha;
-        \item realizar corrida de revezamento.
+        \item exploração subaquática
+        \item limpeza de minas
+        \item limpeza ou monitaramento de reatores nucleares
     \end{itemize}
 
     \begin{figure}
-        \includegraphics[trim = 0 20 0 50, clip, width=0.8\textwidth]{darwin-op-sequencia}
-        %\caption{.}
+        \includegraphics[height = 2.5cm, width=0.3\textwidth]{aquanaut.jpg}
+        \includegraphics[height = 2.5cm, width=0.3\textwidth]{auv-mines.jpg}
+        \includegraphics[height = 2.5cm, width=0.3\textwidth]{auv-cleaning.jpg}
+        \caption{\nocite{WatchMee87:online}}
+        \caption{\nocite{Alookbac39:online}}
+        \caption{\nocite{MeetAqua67:online}}
+        \caption{\nocite{jain2015review}}
     \end{figure}
 %*----------- notes
     \note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
 %-
 %*----------- SLIDE -------------------------------------------------------------
-\begin{frame}[t]{Algumas regras}
-    \begin{itemize}
-        \item A marcha deverá ser realizada diante de um percurso de 2 metros.
-        \item A marcha e a corrida de revezamento deverão serem realizadas numa pista de corrida;
-        \item A corrida deverá ser realizada numa pista de 8 metros;
-        \item Cada Darwin-OP deverá percorrer 2 metros para realizar o revezamento;
-        \item A região de revezamento deverá ser uma área de até 0.4 metros;
-        \item O conceito para o revezamento será o de alinhar-se os dois Darwin-OP durante até 15 segundos a uma distância de no máximo 0.2 metros entre ambos, ou seja será considerado passagem de bastão quando os dois Darwin-OP passarem 15 segundos com movimentos sincronizados a uma distância máxima de 0.2 metros dentro da região de revezamento;
-        \item A pista de corrida deverá ser considerada analogamente a uma pista real;
-        \item A lateral da pista deverá ter lados de 2 metros;
-        \item Considerar sempre os critérios de uma corrida de revezamento.
-    \end{itemize}
-   
-    % \begin{columns}[t]
-    %     \column{.45\textwidth}
-    %         detalhar sistemas em subconjuntos\\
-    %         listar possíveis modos de falhas\\
-    %         analisar cada modo de falha, juntamente com suas possíveis causas e sintomas
-    %     \column{.45\textwidth}
-    %         estimar os efeitos de cada modo de falhas\\
-    %         estimar a criticidade de cada efeito\\
-    %         identificar ações para minimizar falhas
-    % \end{columns}
+\begin{frame}[c]{Mapa Conceitual}
+    %\transboxin[duration=1,direction=30]
+        \begin{figure}
+        \includegraphics[width=1.1\textwidth]{aplications-map.png}
+    \end{figure}
 %*----------- notes
     \note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
 %-
-% --------------------------------------Thâmara---------------------------------------------------
-
-
-
-
-
-
-% --------------------------------------Alexandre---------------------------------------------------
 %*----------- SLIDE -------------------------------------------------------------
-\begin{frame}[c]{A pista}
+\begin{frame}[c]{Design}
+    %\transboxin[duration=1,direction=30]
+    Os AUVs variam em tamanho, sendo eles portáteis até veículos de grande diâmetro.
+    \newline
+    \begin{columns}[t]
+        \column{.05\linewidth}
+        
+        \column{.4\linewidth}
+        \begin{figure}
+            \includegraphics[height = 3.38cm, width=0.8\textwidth]{remus600.jpg}%4.3 metros de comprimento
+            \caption{\nocite{REMUS6001:online}}
+        \end{figure}
+        
+        \column{.6\linewidth}
+        \begin{figure}
+            \includegraphics[height = 3.38cm, width=0.6\textwidth]{BlueROV2.jpg}%45.7cm de comprimento
+            \caption{\nocite{BlueROV210:online}}
+        \end{figure}
+        
+    \end{columns}
+%*----------- notes
+    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[t]{Tecnologia AUV}
+    \transboxout[duration=0.5]
+    \begin{columns}
+        \column{.1\textwidth}
+        \column{.4\textwidth}
+        \column{.4\textwidth}
+    \end{columns}
+
+    \begin{block}{Sistema de Energia}
+        Se destaca pelo aumento da autonomia
+    \end{block}
+
+    \begin{block}{Navegação}
+        Atualmente é possível implementar a tecnologia GPS
+    \end{block}
+
+    \begin{block}{Sistema Sensorial}
+        Armazena sensores para navegar de forma autônoma e mapear recursos do oceano
+    \end{block}
+ %*----------- notes
+    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[c]{Sistema de Energia}
+    %\transboxin[duration=1,direction=30]
     \begin{figure}
-        %\includegraphics[width=0.7\textwidth]{pista_corrida}
-       
-        \roundpic[xshift=0cm,yshift=0cm]{3cm}{7cm}{pista_corrida}
-          
-        \caption{Formato de um pista de corrida.\cite{agostini2007}}
+        \includegraphics[width=1\textwidth]{energy-system.png}
+    \end{figure}
+%*----------- notes
+    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[c]{Navegação}
+    %\transboxin[duration=1,direction=30]
+    \begin{figure}
+        \includegraphics[width=0.77\textwidth]{navigation.png}
+    \end{figure}
+%*----------- notes
+    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[c]{Sistema Sensorial}
+    %\transboxin[duration=1,direction=30]
+    \begin{figure}
+        \includegraphics[width=0.95\textwidth]{sensor-system.png}
     \end{figure}
 %*----------- notes
     \note[item]{Notes can help you to remember important information. Turn on the notes option.}
